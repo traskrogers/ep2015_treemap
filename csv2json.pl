@@ -15,7 +15,7 @@ while (my $line = <$fh>) {
 my $json = JSON->new->utf8;
 my @inner_hash;
 
-for (my $i = 1; $i <= 70; $i++) {
+for (my $i = 1; $i <= $#data; $i++) {
     my $str->{'story'} = $data[$i][0];
     $str->{'parent'} = $data[$i][1];
     $str->{'est_days'} = $data[$i][2];
@@ -25,7 +25,7 @@ for (my $i = 1; $i <= 70; $i++) {
 }
 
 my $hash->{'count'} = scalar @data;
-$hash->{'week'} = [0];
-$hash->{'week'}[0] = \@inner_hash;
+$hash->{'week'} = {};
+$hash->{'week'}{0} = \@inner_hash;
 
 print $json->encode($hash) . "\n";
