@@ -1,0 +1,64 @@
+2016 Projects
+Gate-keeper,2016 Projects
+GK software (berk),Gate-keeper,10,0.2,0
+GK software (lyon),Gate-keeper,12,0.0,0
+GK implement (berk),Gate-keeper,6,0.0,0
+GK implement (lyon),Gate-keeper,12,0.0,0
+Infrastructure,2016 Projects
+Subnet Move,Infrastructure,4,40.0,1
+VPN,Infrastructure
+Linux Client,VPN,1,0.5,1
+Shutdown Access,VPN,1,0.0,1
+Rollout to Eng.,VPN,2,0.0,1
+SSO,Infrastructure,3,0.5,0
+Jenkins,Infrastructure
+Jenkins (comm),Jenkins,10,0.5,0
+Jenkins (tc),Jenkins,6,0.0,0
+Jenkins (hps),Jenkins,6,0.0,2
+Jenkins (3df),Jenkins,4,0.0,2
+Jenkins (exch),Jenkins,10,0.0,3
+Global file-share,Infrastructure
+GFS Brainstorm,Global file-share,4,0.5,1
+GFS POC,Global file-share,5,0.0,1
+GFS implement,Global file-share,8,0.0,2
+Code-review,Gate-keeper
+Choose CR s/w,Code-review,3,0.3,1
+Install CR s/w,Code-review,5,0.0,1
+CR rollout (comm),Code-review,4,0.0,1
+CR rollout (tc),Code-review,3,0.0,1
+CR rollout (viz),Code-review,3,0.0,2
+CR rollout (exch),Code-review,6,0.0,1
+Simplified Builds,2016 Projects
+CMake (tc),Simplified Builds,20,0.0,2
+CMake (comm),Simplified Builds,16,0.0,2
+CMake (hps),Simplified Builds,6,0.0,3
+CMake (3df),Simplified Builds,6,0.0,3
+CMake (exch),Simplified Builds,30,0.0,2
+Single Build Cmd,Simplified Builds
+SBC Brainstorm,Single Build Cmd,4,0.0,0
+SBC POC,Single Build Cmd,6,0.0,0
+SBC (viz),Single Build Cmd,5,0.0,1
+SBC (tc),Single Build Cmd,5,0.0,1
+SBC (comm),Single Build Cmd,10,0.0,1
+SBC (exch/pub),Single Build Cmd,16,0.0,1
+All Deps Managed,Simplified Builds
+ADM Brainstorm,All Deps Managed,4,0.0,0
+ADM POC,All Deps Managed,12,0.0,0
+ADM (tc),All Deps Managed,8,0.0,0
+ADM (comm),All Deps Managed,16,0.0,0
+ADM (hps),All Deps Managed,12,0.0,2
+ADM (3df),All Deps Managed,12,0.0,3
+ADM (exch),All Deps Managed,20,0.0,1,(done?)
+Builds Pass,Gate-keeper
+BP Jenkins connector,Builds Pass,4,0.0,1
+BP POC,Builds Pass,3,0.0,1
+BP (tc),Builds Pass,2,0.0,1
+BP (comm),Builds Pass,2,0.0,1
+BP (viz),Builds Pass,3,0.0,2
+BP (exch),Builds Pass,6,0.0,1
+Tests Pass,Gate-keeper
+TP POC,Tests Pass,3,0.0,1
+TP (tc),Tests Pass,3,0.0,1
+TP (comm),Tests Pass,4,0.0,1
+TP (viz),Tests Pass,6,0.0,3
+TP (exch),Tests Pass,12,0.0,1
