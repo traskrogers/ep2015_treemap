@@ -1,10 +1,3 @@
-// Code-review,Gate-keeper
-// Choose CR s/w,Code-review,3,0.3,1
-// Install CR s/w,Code-review,5,0.0,1
-// CR rollout (comm),Code-review,4,0.0,1
-// CR rollout (tc),Code-review,3,0.0,1
-// CR rollout (viz),Code-review,3,0.0,2
-// CR rollout (exch),Code-review,6,0.0,1
 {
   "name": "2016 Projects",
   "children": [
@@ -24,6 +17,27 @@
           {"name": "CR rollout (tc)", "est_days": 3, "progress": 0.0, "priority": 1},
           {"name": "CR rollout (viz)", "est_days": 3, "progress": 0.0, "priority": 2},
           {"name": "CR rollout (exch)", "est_days": 6, "progress": 0.0, "priority": 1},
+        ]
+      },
+      {
+        "name": "Builds Pass",
+        "children": [
+          {"name": "BP Jenkins Integration", "est_days": 4, "progress": 0.0, "priority": 1},
+          {"name": "BP POC", "est_days": 3, "progress": 0.0, "priority": 1},
+          {"name": "BP (tc)", "est_days": 2, "progress": 0.0, "priority": 1},
+          {"name": "BP (comm)", "est_days": 2, "progress": 0.0, "priority": 1},
+          {"name": "BP (viz)", "est_days": 3, "progress": 0.0, "priority": 3},
+          {"name": "BP (exch)", "est_days": 6, "progress": 0.0, "priority": 1},
+        ]
+      },
+      {
+        "name": "Tests Pass",
+        "children": [
+          {"name": "TP POC", "est_days": 3, "progress": 0.0, "priority": 1},
+          {"name": "TP (tc)", "est_days": 3, "progress": 0.0, "priority": 1},
+          {"name": "TP (comm)", "est_days": 4, "progress": 0.0, "priority": 1},
+          {"name": "TP (viz)", "est_days": 6, "progress": 0.0, "priority": 3},
+          {"name": "TP (exch)", "est_days": 12, "progress": 0.0, "priority": 1},
         ]
       },
     ]
@@ -72,51 +86,27 @@
       {
         "name": "Single Build Cmd",
         "children": [
-          // xxxx
+          {"name": "SBC Brainstorm", "est_days": 4, "progress": 0.0, "priority": 1},
+          {"name": "SBC POC", "est_days": 6, "progress": 0.0, "priority": 1},
+          {"name": "SBC (viz)", "est_days": 5, "progress": 0.0, "priority": 1},
+          {"name": "SBC (tc)", "est_days": 5, "progress": 0.0, "priority": 1},
+          {"name": "SBC (comm)", "est_days": 10, "progress": 0.0, "priority": 1},
+          {"name": "SBC (exch)", "est_days": 16, "progress": 0.0, "priority": 1},
         ]
       },
       {
         "name": "All Deps Managed",
         "children": [
-          // xxx
+          {"name": "ADM Brainstorm", "est_days": 4, "progress": 0.0, "priority": 0}
+          {"name": "ADM POC", "est_days": 12, "progress": 0.0, "priority": 0},
+          {"name": "ADM (tc)", "est_days": 8, "progress": 0.0, "priority": 0},
+          {"name": "ADM (comm)", "est_days": 16, "progress": 0.0, "priority": 0},
+          {"name": "ADM (exch)", "est_days": 20, "progress": 0.0, "priority": 0},
+          {"name": "ADM (hps)", "est_days": 12, "progress": 0.0, "priority": 2},
+          {"name": "ADM (3df)", "est_days": 12, "progress": 0.0, "priority": 3},
         ]
       }
     ]
   }
-  ]
-}
-
-
-
-Simplified Builds,2016 Projects
-
-Single Build Cmd,Simplified Builds
-SBC Brainstorm,Single Build Cmd,4,0.0,0
-SBC POC,Single Build Cmd,6,0.0,0
-SBC (viz),Single Build Cmd,5,0.0,1
-SBC (tc),Single Build Cmd,5,0.0,1
-SBC (comm),Single Build Cmd,10,0.0,1
-SBC (exch/pub),Single Build Cmd,16,0.0,1
-All Deps Managed,Simplified Builds
-ADM Brainstorm,All Deps Managed,4,0.0,0
-ADM POC,All Deps Managed,12,0.0,0
-ADM (tc),All Deps Managed,8,0.0,0
-ADM (comm),All Deps Managed,16,0.0,0
-ADM (hps),All Deps Managed,12,0.0,2
-ADM (3df),All Deps Managed,12,0.0,3
-ADM (exch),All Deps Managed,20,0.0,1,(done?)
-Builds Pass,Gate-keeper
-BP Jenkins connector,Builds Pass,4,0.0,1
-BP POC,Builds Pass,3,0.0,1
-BP (tc),Builds Pass,2,0.0,1
-BP (comm),Builds Pass,2,0.0,1
-BP (viz),Builds Pass,3,0.0,2
-BP (exch),Builds Pass,6,0.0,1
-Tests Pass,Gate-keeper
-TP POC,Tests Pass,3,0.0,1
-TP (tc),Tests Pass,3,0.0,1
-TP (comm),Tests Pass,4,0.0,1
-TP (viz),Tests Pass,6,0.0,3
-TP (exch),Tests Pass,12,0.0,1
   ]
 }

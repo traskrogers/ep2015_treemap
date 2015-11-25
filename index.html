@@ -41,7 +41,7 @@ var color = d3.scale.category20c();
 var treemap = d3.layout.treemap()
     .size([width, height])
     .sticky(true)
-    .value(function(d) { return d.size; });
+    .value(function(d) { return d.est_days; });
 
 var div = d3.select("body").append("div")
     .style("position", "relative")
@@ -50,7 +50,7 @@ var div = d3.select("body").append("div")
     .style("left", margin.left + "px")
     .style("top", margin.top + "px");
 
-d3.json("flare.json", function(error, root) {
+d3.json("foo.json", function(error, root) {
   if (error) throw error;
 
   var node = div.datum(root).selectAll(".node")
@@ -64,7 +64,7 @@ d3.json("flare.json", function(error, root) {
   d3.selectAll("input").on("change", function change() {
     var value = this.value === "count"
         ? function() { return 1; }
-        : function(d) { return d.size; };
+        : function(d) { return d.est_days; };
 
     node
         .data(treemap.value(value).nodes)
