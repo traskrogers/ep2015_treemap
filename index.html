@@ -36,7 +36,10 @@ var margin = {top: 40, right: 10, bottom: 10, left: 10},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var color = d3.scale.category20c();
+// var color = d3.scale.category20c();
+var colorScale = d3.scale.linear()
+	.range(['lightgray', 'darkgreen'])
+	.domain([0, 10]);
 
 var treemap = d3.layout.treemap()
     .size([width, height])
@@ -58,7 +61,7 @@ d3.json("foo.json", function(error, root) {
     .enter().append("div")
       .attr("class", "node")
       .call(position)
-      .style("background", function(d) { return d.children ? color(d.name) : null; })
+      .style("background", function(d) { return d.children ? null : colorScale(d.progress); })
       .text(function(d) { return d.children ? null : d.name; });
 
   d3.selectAll("input").on("change", function change() {
