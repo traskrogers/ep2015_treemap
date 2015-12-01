@@ -26,8 +26,8 @@ form {
 
 </style>
 <form>
-  <label><input type="radio" name="mode" value="size" checked> Size</label>
-  <label><input type="radio" name="mode" value="count"> Count</label>
+  <label><input type="radio" name="mode" value="0" checked> Initial</label>
+  <label><input type="radio" name="mode" value="1"> the next week</label>
 </form>
 <script src="d3.v3.min.js"></script>
 <script>
@@ -53,28 +53,28 @@ var div = d3.select("body").append("div")
     .style("left", margin.left + "px")
     .style("top", margin.top + "px");
 
-d3.json("foo.json", function(error, root) {
-  if (error) throw error;
+function load_json_d3(json_file) {
+  d3.json(json_file, function(error, root) {
+    if (error) throw error;
 
-  var node = div.datum(root).selectAll(".node")
-      .data(treemap.nodes)
-    .enter().append("div")
-      .attr("class", "node")
-      .call(position)
-      .style("background", function(d) { return d.children ? null : colorScale(d.progress); })
-      .text(function(d) { return d.children ? null : d.name; });
-
-  d3.selectAll("input").on("change", function change() {
-    var value = this.value === "count"
-        ? function() { return 1; }
-        : function(d) { return d.est_days; };
-
-    node
-        .data(treemap.value(value).nodes)
-      .transition()
-        .duration(1500)
-        .call(position);
+    var node = div.datum(root).selectAll(".node")
+        .data(treemap.nodes)
+      .enter().append("div")
+        .attr("class", "node")
+        .call(position)
+        .style("background", function(d) { return d.children ? null : colorScale(d.progress); })
+        .text(function(d) { return d.children ? null : d.name; });
   });
+}
+
+d3.selectAll("input").on("change", function change() {
+  load_json_d3("week_" + this.value + ".json");
+
+  // node
+  //     .data(treemap.value(value).nodes)
+  //   .transition()
+  //     .duration(1500)
+  //     .call(position);
 });
 
 function position() {
