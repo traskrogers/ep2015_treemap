@@ -26,8 +26,9 @@ form {
 
 </style>
 <form>
-  <label><input type="radio" name="mode" value="0" checked> Initial</label>
-  <label><input type="radio" name="mode" value="1"> the next week</label>
+  <label><input type="radio" name="mode" value="00" checked> Nov. 16th</label>
+  <label><input type="radio" name="mode" value="01"> Nov. 23rd</label>
+  <label><input type="radio" name="mode" value="02"> Nov. 30th</label>
 </form>
 <script src="d3.v3.min.js"></script>
 <script>
@@ -36,14 +37,14 @@ var margin = {top: 40, right: 10, bottom: 10, left: 10},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-// var color = d3.scale.category20c();
+
 var colorScale = d3.scale.linear()
 	.range(['lightgray', 'darkgreen'])
 	.domain([0, 10]);
 
 var treemap = d3.layout.treemap()
     .size([width, height])
-    .sticky(true)
+    .sticky(false)
     .value(function(d) { return d.est_days; });
 
 var div = d3.select("body").append("div")
@@ -67,14 +68,20 @@ function load_json_d3(json_file) {
   });
 }
 
-d3.selectAll("input").on("change", function change() {
-  load_json_d3("week_" + this.value + ".json");
+load_json_d3("week_00.json");
 
-  // node
-  //     .data(treemap.value(value).nodes)
-  //   .transition()
-  //     .duration(1500)
-  //     .call(position);
+d3.selectAll("input").on("change", function change() {
+  json_file = "week_" + this.value + ".json";
+  d3.json(json_file, function(error, root) {
+    if (error) throw error;
+
+    var node = div.datum(root).selectAll(".node")
+      .data(treemap.nodes)
+      .transition()
+      .duration(1500)
+	  .style("background", function(d) { return d.children ? null : colorScale(d.progress); })
+      .call(position);
+  });
 });
 
 function position() {
