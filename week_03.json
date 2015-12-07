@@ -1,0 +1,112 @@
+{
+  "name": "2016 Projects",
+  "children": [
+    {
+      "name": "Gate-keeper",
+      "children": [
+        {"name": "GK software (berk)", "est_days": 10, "progress": 2, "priority": 1},
+        {"name": "GK software (lyon)", "est_days": 12, "progress": 0, "priority": 1},
+        {"name": "GK implement (berk)", "est_days": 6, "progress": 0, "priority": 1},
+        {"name": "GK implement (lyon)", "est_days": 12, "progress": 0, "priority": 1},
+        {
+          "name": "Code-review",
+          "children": [
+            {"name": "Choose CR s/w", "est_days": 3, "progress": 4, "priority": 1},
+            {"name": "Install CR s/w", "est_days": 5, "progress": 0, "priority": 1},
+            {"name": "CR rollout (comm)", "est_days": 4, "progress": 0, "priority": 1},
+            {"name": "CR rollout (tc)", "est_days": 3, "progress": 0, "priority": 1},
+            {"name": "CR rollout (viz)", "est_days": 3, "progress": 0, "priority": 2},
+            {"name": "CR rollout (exch)", "est_days": 6, "progress": 0, "priority": 1}
+          ]
+        },
+        {
+          "name": "Builds Pass",
+          "children": [
+            {"name": "BP Jenkins Integration", "est_days": 4, "progress": 0, "priority": 1},
+            {"name": "BP POC", "est_days": 3, "progress": 0, "priority": 1},
+            {"name": "BP (tc)", "est_days": 2, "progress": 0, "priority": 1},
+            {"name": "BP (comm)", "est_days": 2, "progress": 0, "priority": 1},
+            {"name": "BP (viz)", "est_days": 3, "progress": 0, "priority": 3},
+            {"name": "BP (exch)", "est_days": 6, "progress": 0, "priority": 1}
+          ]
+        },
+        {
+          "name": "Tests Pass",
+          "children": [
+            {"name": "TP POC", "est_days": 3, "progress": 0, "priority": 1},
+            {"name": "TP (tc)", "est_days": 3, "progress": 0, "priority": 1},
+            {"name": "TP (comm)", "est_days": 4, "progress": 0, "priority": 1},
+            {"name": "TP (viz)", "est_days": 6, "progress": 0, "priority": 3},
+            {"name": "TP (exch)", "est_days": 12, "progress": 0, "priority": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "children": [
+        {"name": "Subnet Move", "est_days": 4, "progress": 10, "priority": 0},
+        {"name": "SSO", "est_days": 3, "progress": 5, "priority": 0},
+        {
+          "name": "VPN",
+          "children": [
+            {"name": "Linux Client", "est_days": 1, "progress": 6, "priority": 1},
+            {"name": "Shutdown Access", "est_days": 1, "progress": 0, "priority": 1},
+            {"name": "Rollout to Eng", "est_days": 2, "progress": 0, "priority": 1}
+          ]
+        },
+        {
+          "name": "Jenkins",
+          "children": [
+            {"name": "Jenkins (comm)", "est_days": 10, "progress": 7, "priority": 0},
+            {"name": "Jenkins (tc)", "est_days": 6, "progress": 3, "priority": 0},
+            {"name": "Jenkins (hps)", "est_days": 6, "progress": 0, "priority": 2},
+            {"name": "Jenkins (3df)", "est_days": 4, "progress": 0, "priority": 2},
+            {"name": "Jenkins (exch)", "est_days": 10, "progress": 0, "priority": 3}
+          ]
+        },
+        {
+          "name": "Global file-share",
+          "children": [
+            {"name": "GFS Brainstorm", "est_days": 4, "progress": 9, "priority": 1},
+            {"name": "GFS POC", "est_days": 5, "progress": 0, "priority": 1},
+            {"name": "GFS implement", "est_days": 8, "progress": 0, "priority": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Simplified Builds",
+      "children": [
+        {"name": "CMake (tc)", "est_days": 20, "progress": 2, "priority": 2},
+        {"name": "CMake (comm)", "est_days": 16, "progress": 0, "priority": 2},
+        {"name": "CMake (hps)", "est_days": 6, "progress": 0, "priority": 3},
+        {"name": "CMake (3df)", "est_days": 6, "progress": 0, "priority": 3},
+        {"name": "CMake (exch)", "est_days": 30, "progress": 0, "priority": 2},
+        {
+          "name": "Single Build Cmd",
+          "children": [
+            {"name": "SBC Brainstorm", "est_days": 4, "progress": 0, "priority": 1},
+            {"name": "SBC POC", "est_days": 6, "progress": 0, "priority": 1},
+            {"name": "SBC (viz)", "est_days": 5, "progress": 0, "priority": 1},
+            {"name": "SBC (tc)", "est_days": 5, "progress": 0, "priority": 1},
+            {"name": "SBC (comm)", "est_days": 10, "progress": 0, "priority": 1},
+            {"name": "SBC (exch)", "est_days": 16, "progress": 0, "priority": 1}
+          ]
+        },
+        {
+          "name": "All Deps Managed",
+          "children": [
+            {"name": "ADM Brainstorm", "est_days": 4, "progress": 6, "priority": 0},
+            {"name": "ADM POC", "est_days": 12, "progress": 0, "priority": 0},
+            {"name": "ADM (tc)", "est_days": 8, "progress": 0, "priority": 0},
+            {"name": "ADM (comm)", "est_days": 16, "progress": 0, "priority": 0},
+            {"name": "ADM (exch)", "est_days": 20, "progress": 0, "priority": 0},
+            {"name": "ADM (hps)", "est_days": 12, "progress": 0, "priority": 2},
+            {"name": "ADM (3df)", "est_days": 12, "progress": 0, "priority": 3}
+          ]
+        }
+      ]
+    }
+  ]
+}
