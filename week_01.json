@@ -111,7 +111,7 @@
     {
       "name": "Unified VCS",
       "children": [
-        {"name": "VCS Brainstorm", "est_days": 16, "progress": 20, "priority": 1},
+        {"name": "VCS Brainstorm", "est_days": 16, "progress": 2, "priority": 1},
         {"name": "VCS POC", "est_days": 16, "progress": 0, "priority": 1},
         {"name": "VCS Planning", "est_days": 8, "progress": 0, "priority": 1},
         {"name": "VCS Migration", "est_days": 20, "progress": 0, "priority": 1},
